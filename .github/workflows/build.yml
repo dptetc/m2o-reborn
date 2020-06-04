@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: cmake-configure
+      uses: snickerbockers/cmake-configure@prerel1
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v2
