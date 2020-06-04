@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: configure
-      run: mkdir build && cd build && cmake .. -G"Visual Studio 16 2019" -DM2O_SERVER=1 -DM2O_CLIENT=1 -DM2O_CEF=1
+      run: mkdir build && cd build && cmake .. -G"Visual Studio 15 2017" -DM2O_SERVER=1 -DM2O_CLIENT=1 -DM2O_CEF=1
     - name: build
       run: cmake --build build --config MinSizeRel
     - name: Download a Build Artifact
