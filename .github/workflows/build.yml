@@ -16,6 +16,6 @@ jobs:
     - name: configure
       run: mkdir build && cd build && cmake .. -G"Visual Studio 15 2017" -DM2O_SERVER=1 -DM2O_CLIENT=1 -DM2O_CEF=1
     - name: build
-      run: cmake --build build --config MinSizeRel
+      run: cmake --build build --config Debug
     - name: Download a Build Artifact
       uses: actions/download-artifact@v2
