@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: cmake-configure
-      uses: snickerbockers/cmake-configure@prerel1
+    - name: configure
+      run: mkdir build && cd build && cmake ..
     - name: build
       run: cmake --build build --config MinSizeRel
     - name: Download a Build Artifact
